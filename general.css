@@ -1,0 +1,44 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Site layout */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100svh;
+  background-color: rgb(226, 227, 227);
+}
+header,
+footer {
+  background-color: aliceblue;
+  padding: 1rem;
+}
+main {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: white;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.h1_logo {
+  padding-left: 200px;
+}
+
+.p_categories_brands_season {
+  margin-left: auto;
+  padding-right: 200px;
+}
