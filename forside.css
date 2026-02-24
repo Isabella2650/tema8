@@ -1,15 +1,38 @@
 .div_buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 50px;
-}
-
-button {
-  padding: 20px;
-  margin: 10px;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  justify-items: center;
 }
 
 .h1_categories {
   padding-left: 60px;
   padding-top: 30px;
+}
+
+a {
+  background-color: rgb(247, 214, 243);
+  border-color: azure;
+  min-width: 120px;
+  text-align: center;
+  padding: 20px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 2px;
+  color: black;
+}
+
+@media screen and (min-width: 800px) {
+  /* desktop styles */
+  .div_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+  }
+
+  a {
+    min-width: 300px;
+    padding: 40px;
+    margin: 10px;
+  }
 }
