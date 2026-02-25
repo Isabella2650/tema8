@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>møbler</h1>
+    <ul>
+
+    </ul>
+
+    <script>
+        const ul = document.querySelector("ul") /* lav en contsant og vælg elementet */
+
+        const genstande = ["sofa", "stol", "bord", "lænestol"] /* lav en contant til listen */
+
+        function bygListe(elm) { ul.innerHTML += `<li>${elm}</li>`; } /* lav en function kaldet bygList som sørger for at når der tiføjes et element kommer det ud i ul i browsern */
+
+        genstande.forEach(bygListe); /* constanten genstande skal der trækkes en fra af gangen for at bygge vores liste */
+
+    </script>
+</body>
+
+</html>

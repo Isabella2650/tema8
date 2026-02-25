@@ -1,0 +1,95 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.udsolgt {
+  background-color: rgb(234, 179, 179);
+  border-color: azure;
+  max-width: 70px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+button {
+  background-color: white;
+  min-width: 120px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+}
+
+.div_tekst {
+  padding: 10px;
+}
+
+button:hover {
+  transform: scale(1.05); /* Laver hover effect = forstørrer */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Laver skygge og farve på hover effecten */
+  border-width: 2px;
+}
+
+.div_sizes {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.size {
+  background-color: white;
+  min-width: 20px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+.size:hover {
+  border-width: 2px;
+}
+
+.p_streg {
+  text-decoration: line-through;
+  color: brown;
+}
+
+@media screen and (min-width: 800px) {
+  /* desktop styles */
+  img {
+    max-width: 80%;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px;
+    align-items: center;
+  }
+
+  .div_button {
+    padding: 70px;
+  }
+
+  .size {
+    padding: 10px;
+  }
+}

@@ -12,6 +12,39 @@ img {
   align-items: center;
 }
 
+a:hover img {
+  transform: scale(1.05); /* Laver hover effect = forstørrer */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Laver skygge og farve på hover effecten */
+}
+
+a {
+  display: block; /* Sørger for at hover ikke ødlægger layoutet */
+  overflow: hidden; /* Sørger for at hover ikke ødlægger layoutet */
+}
+
+.udsolgt {
+  background-color: rgb(234, 179, 179);
+  border-color: azure;
+  max-width: 70px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.div_img {
+  padding: 10px;
+}
+
+.div_button {
+  display: flex;
+}
+
+.p_streg {
+  text-decoration: line-through;
+  color: brown;
+}
+
 @media screen and (min-width: 800px) {
   /* desktop styles */
   .cards {

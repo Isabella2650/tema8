@@ -6,12 +6,17 @@
 }
 
 .h1_categories {
-  padding-left: 60px;
+  padding-left: 75px;
   padding-top: 30px;
 }
 
+a:hover {
+  transform: scale(1.05); /* Laver hover effect = forstørrer */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Laver skygge og farve på hover effecten */
+}
+
 a {
-  background-color: rgb(247, 214, 243);
+  background-color: rgb(202, 190, 186);
   border-color: azure;
   min-width: 120px;
   text-align: center;
