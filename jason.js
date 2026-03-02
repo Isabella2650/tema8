@@ -10,7 +10,7 @@ function getData() {
 function showData(data) {
   console.log(data);
   data.forEach((kategori) => {
-    container.innerHTML += `<a href="productlist.html">${kategori.category}</a>`;
+    container.innerHTML += `<a href="productlist.html?category=${kategori.category}">${kategori.category}</a>`;
   });
 } /* showData er en function der tjekker data */
 

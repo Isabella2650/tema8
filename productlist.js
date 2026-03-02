@@ -1,14 +1,20 @@
-console.log;
+const category = new URLSearchParams(window.location.search).get(
+  "category",
+); /*Tjek URL og hent data derfra, altså hent category derfra */
+
+console.log(category);
+("productlist.js is connected");
 
 const container = document.querySelector(".cards");
 
-const endpoint = "https://kea-alt-del.dk/t7/api/products"; /*Hent data herfra */
+const endpoint = `https://kea-alt-del.dk/t7/api/products?limit=12&category=${category}`; /*Hent data herfra */
 
 function getData() {
   fetch(endpoint).then((respons) => respons.json().then(showData));
 } /* Fetche betyder det bliver kastet. Computeren griber respons, then respons vises i json (browseren) */
 
 function showData(data) {
+  console.table(data);
   let markup = "";
   data.forEach((element) => {
     console.log(element);
