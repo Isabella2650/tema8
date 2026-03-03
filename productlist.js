@@ -19,12 +19,12 @@ function showData(data) {
   data.forEach((element) => {
     console.log(element);
     markup += `<div class="div_img">
-                    <a href="product.html"><img src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" /></a>
+                    <a href="productdetails.html?fisk=${element.id}"><img src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" /></a>
                     <h2>${element.productdisplayname}</h2>
-                    <p>Malene birger Clutch</p>
-                    <p>Gucci solbriller <br><br></p>
-                    <p class="p_streg">699 kr ${element.price}</p>
-                    <p> Nu 559 kr</p>
+                    <p>${element.brandname} <br><br></p>
+                    <p class="p_streg"> ${element.price}</p>
+                    <p> ${element.discount}</p>
+                    <p class="udsolgt">Udsolgt</p>
                 </div>`;
   });
   container.innerHTML = markup;
