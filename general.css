@@ -21,6 +21,9 @@ header,
 footer {
   background-color: rgb(255, 255, 255);
   padding: 1rem;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
 }
 main {
   margin: 0 auto;

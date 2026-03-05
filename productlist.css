@@ -22,14 +22,21 @@ a {
   overflow: hidden; /* Sørger for at hover ikke ødlægger layoutet */
 }
 
-.udsolgt {
-  background-color: rgb(234, 179, 179);
-  border-color: azure;
+.discound_soldout {
+  display: flex;
+  align-items: center;
+}
+
+.udsolgt,
+.discount {
+  background-color: brown;
   max-width: 70px;
   text-align: center;
   padding: 10px;
   margin: 5px;
   border-radius: 2px;
+  color: white;
+  margin-top: 30px;
 }
 
 .div_img {
@@ -43,6 +50,24 @@ a {
 .p_streg {
   text-decoration: line-through;
   color: brown;
+}
+
+button {
+  background-color: white;
+  min-width: 120px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+button:hover {
+  transform: scale(1.05); /* Laver hover effect = forstørrer */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Laver skygge og farve på hover effecten */
 }
 
 @media screen and (min-width: 800px) {
