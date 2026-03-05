@@ -9,27 +9,59 @@ const container = document.querySelector(".cards");
 
 const endpoint = `https://kea-alt-del.dk/t7/api/products?limit=12&category=${category}&limit=30`; /*Hent data herfra */
 
+/* hiv fat i button med class filtrer. Hiv fat i hvert enkelt knap og lyt efter et klik som henter functionen sorter  */
 document
-  .querySelectorAll("button")
+  .querySelectorAll(".filtrer button")
   .forEach((knap) => knap.addEventListener("click", filter));
 
-let allData;
+/* hiv fat i button med class sorter. Hiv fat i hvert enkelt knap og lyt efter et klik som henter functionen sorter */
+document
+  .querySelectorAll(".sorter button")
+  .forEach((knap) => knap.addEventListener("click", sorter));
+
+function sorter(e) {
+  if (e.target.dataset.price) {
+    const dir = e.target.dataset.price;
+    if (dir == "up") {
+      udsnit.sort((a, b) => a.price - b.price);
+    } else {
+      udsnit.sort((a, b) => b.price - a.price);
+    }
+  } else {
+    /* Ellers sorter alfabetisk */
+    const dir = e.target.dataset.text;
+    if (dir == "az") {
+      udsnit.sort((a, b) =>
+        a.productdisplayname.localeCompare(b.productdisplayname, "da"),
+      );
+    } else {
+      udsnit.sort((a, b) =>
+        b.productdisplayname.localeCompare(a.productdisplayname, "da"),
+      );
+    }
+  }
+
+  showData(udsnit);
+}
+
+let allData; /* Erklær en variabel til alle produkter */
+let udsnit;
 
 function getData() {
   fetch(endpoint)
     .then((response) => response.json())
     .then((data) => {
-      allData = data;
-      showData(allData);
+      allData = udsnit = data;
+      showData(allData); /* vis alle produkter */
     });
 } /* Fetche betyder det bliver kastet. Computeren griber respons, then respons vises i json (browseren) */
 
 function filter(e) {
   const valgt = e.target.textContent;
   if (valgt == "All") {
-    showData(allData);
+    showData(allData); /* vis alle produkter */
   } else {
-    const udsnit = allData.filter((element) => element.gender == valgt);
+    udsnit = allData.filter((element) => element.gender == valgt);
     showData(udsnit);
   }
 }
